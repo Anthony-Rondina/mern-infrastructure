@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import './pages/App/App';
+import App from './pages/App/App';
+import { BrowserRouter as Router } from 'react-router-dom'
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* react context API is why we wrap router around app. Passes props down  */}
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
