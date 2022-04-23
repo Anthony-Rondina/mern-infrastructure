@@ -1,5 +1,7 @@
 // users-api.js
 
+
+
 // This is the base path of the Express route we'll define
 const BASE_URL = '/api/users';
 
@@ -20,4 +22,12 @@ export async function signUp(userData) {
   } else {
     throw new Error('Invalid Sign Up');
   }
+}
+
+export async function checkToken(){
+
+}
+
+export async function login(){
+
 }

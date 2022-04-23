@@ -21,8 +21,9 @@ export default class SignUpForm extends Component {
             // removes the error and confirm from the newly made formData ojbect
             delete formData.error;
             delete formData.confirm;
-
             const user = await signUp(formData)
+            this.props.setUser(user)
+            localStorage.setItem('token', user)
             //OR DO THE FOLLOWING
             // const formData = {
             //     name: this.state.name,
